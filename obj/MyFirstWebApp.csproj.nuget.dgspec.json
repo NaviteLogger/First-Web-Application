@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kacpr\\OneDrive\\Programowanie\\ASP.NET\\MyFirstWebApp\\MyFirstWebApp.csproj": {}
+    "C:\\Users\\kacpr\\OneDrive\\Programowanie\\ASP.NET\\MyFirstWebApp\\MyFirstWebApp\\MyFirstWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kacpr\\OneDrive\\Programowanie\\ASP.NET\\MyFirstWebApp\\MyFirstWebApp.csproj": {
+    "C:\\Users\\kacpr\\OneDrive\\Programowanie\\ASP.NET\\MyFirstWebApp\\MyFirstWebApp\\MyFirstWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kacpr\\OneDrive\\Programowanie\\ASP.NET\\MyFirstWebApp\\MyFirstWebApp.csproj",
+        "projectUniqueName": "C:\\Users\\kacpr\\OneDrive\\Programowanie\\ASP.NET\\MyFirstWebApp\\MyFirstWebApp\\MyFirstWebApp.csproj",
         "projectName": "MyFirstWebApp",
-        "projectPath": "C:\\Users\\kacpr\\OneDrive\\Programowanie\\ASP.NET\\MyFirstWebApp\\MyFirstWebApp.csproj",
+        "projectPath": "C:\\Users\\kacpr\\OneDrive\\Programowanie\\ASP.NET\\MyFirstWebApp\\MyFirstWebApp\\MyFirstWebApp.csproj",
         "packagesPath": "C:\\Users\\kacpr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kacpr\\OneDrive\\Programowanie\\ASP.NET\\MyFirstWebApp\\obj\\",
+        "outputPath": "C:\\Users\\kacpr\\OneDrive\\Programowanie\\ASP.NET\\MyFirstWebApp\\MyFirstWebApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,8 +30,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -42,15 +42,16 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -62,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.307\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
