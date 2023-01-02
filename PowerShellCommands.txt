@@ -1,0 +1,30 @@
+﻿dotnet build
+dotnet run
+dotnet list package
+dotnet add package
+dotnet remove package
+dotnet publish
+dotnet restore
+dotnet test
+dotnet tool install
+dotnet tool uninstall
+dotnet tool update
+dotnet tool list
+dotnet nuget add source
+dotnet nuget disable source
+dotnet nuget enable source
+dotnet nuget list source
+dotnet nuget remove source
+dotnet nuget update source
+dotnet nuget locals
+dotnet nuget push
+dotnet nuget delete
+dotnet nuget list
+dotnet nuget setapikey
+dotnet nuget setrepositorypassword
+dotnet nuget verify
+dotnet nuget update
+dotnet nuget add
+dotnet nuget remove
+dotnet nuget enable
+dotnet nuget disable
