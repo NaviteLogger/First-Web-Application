@@ -1,21 +1,25 @@
 ﻿dotnet build
 dotnet run
-dotnet list package
-dotnet add package
-dotnet remove package
 dotnet publish
 dotnet restore
 dotnet test
+
+dotnet list package
+dotnet add package
+dotnet remove package
+
 dotnet tool install
 dotnet tool uninstall
 dotnet tool update
 dotnet tool list
+
 dotnet nuget add source
 dotnet nuget disable source
 dotnet nuget enable source
 dotnet nuget list source
 dotnet nuget remove source
 dotnet nuget update source
+
 dotnet nuget locals
 dotnet nuget push
 dotnet nuget delete
@@ -28,3 +32,11 @@ dotnet nuget add
 dotnet nuget remove
 dotnet nuget enable
 dotnet nuget disable
+
+dotnet ef migrations add
+dotnet ef migrations remove
+dotnet ef migrations script
+dotnet ef migrations list
+dotnet ef database update
+dotnet ef database drop
+dotnet ef dbcontext scaffold
