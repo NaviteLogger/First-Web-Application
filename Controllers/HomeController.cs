@@ -10,6 +10,7 @@ namespace MyFirstWebApp.Controllers
         {
             string greeting;
             DateTime time = DateTime.Now;
+            
             int hour = time.Hour;
             if (hour < 12)
             {
