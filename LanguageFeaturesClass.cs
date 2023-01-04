@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic;
+﻿using Microsoft.Identity.Client;
+using Microsoft.VisualBasic;
 using System;
 
 namespace LanguageFeatures
@@ -13,7 +14,7 @@ namespace LanguageFeatures
             public int Y { get; set; }
         }
         static void TestInterpolatedString()
-        { 
+        {
             var p1 = new Point { X = 5, Y = 10 };
             var p2 = new Point { X = 7, Y = 3 };
 
@@ -25,9 +26,26 @@ namespace LanguageFeatures
             Console.WriteLine($"The area of interest is bounded by ({p1.X},{p1.Y}) and ({p2.X},{p2.Y})");
             //The compiler now maintains the placeholders for you so you don’t have to worry about indexing the right argument because you simply place it right there in the string.
         }
-
-
         //nullable value
+        public class NullableValues<T>
+        {
+            double? pi = 3.14;
+            char? letter = 'a';
+            int?[] arr = new int?[10]; //An arrayh of nullable value type
 
+            static void TestNullableTypes()
+            {
+                //Testing for instance of a nullable value type
+                int? a = 42;
+                if (a is int valueOfA)
+                {
+                    Console.WriteLine($"a is {valueOfA}");
+                }
+                else
+                {
+                    Console.WriteLine("a does not have a value");
+                }
+            }
+        }
     }
 }
