@@ -1,11 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MyFirstWebApp.Controllers
 {
     public class HomeController : Controller
     {
-
         public ViewResult Index() //after the method is called, it returns the Index.cshtml view containing the "MyView" header and the string "Good morning"/"Good afternoon"/"Good evening"
         {
             string greeting;
@@ -24,6 +24,7 @@ namespace MyFirstWebApp.Controllers
                 greeting = "Good evening";
             }
             return View("MyView", greeting); //"MyView" is the name of the view file, and "greeting" is the model object passed to return
+                                             //greeting variable will replace @Model in MyView
         }
     }
 }
