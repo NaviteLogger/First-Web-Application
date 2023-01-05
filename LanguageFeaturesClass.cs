@@ -61,7 +61,17 @@ namespace LanguageFeatures
                 numbers.Add(a ??= 0);
                 Console.WriteLine(string.Join(" ", numbers));  // output: 5 0
                 Console.WriteLine(a);  // output: 0
+
+
+                double SumNumbers(List<double[]> setsOfNumbers, int indexOfSetToSum)
+                {
+                    return setsOfNumbers?[indexOfSetToSum]?.Sum() ?? double.NaN;
+                }
+
+                var sum = SumNumbers(null, 0);
+                Console.WriteLine(sum);  // output: NaN
             }
+
         }
     }
 }
