@@ -73,5 +73,25 @@ namespace LanguageFeatures
             }
 
         }
+
+        public class LambdaStructures
+        {
+            Func<int, int> square = x => x * x;
+            Func<int, int, int> add = (x, y) => x + y;
+            Action<int> write = x => Console.WriteLine(x);
+            Func<int, int, int> add2 = (x, y) =>
+            {
+                Console.WriteLine("Adding {0} and {1}", x, y);
+                return x + y;
+            };
+
+            void TestLambdas ()
+            {
+                int[] numbers = { 2, 3, 4, 5 };
+                var squaredNumbers = numbers.Select(x => x * x);
+                Console.WriteLine(string.Join(" ", squaredNumbers));
+            }
+            // Output: 4 9 16 25
+        }
     }
 }
