@@ -1,6 +1,8 @@
 ﻿using Microsoft.Identity.Client;
 using Microsoft.VisualBasic;
 using System;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace LanguageFeatures
 {
@@ -79,6 +81,7 @@ namespace LanguageFeatures
             Func<int, int> square = x => x * x;
             Func<int, int, int> add = (x, y) => x + y;
             Action<int> write = x => Console.WriteLine(x);
+            
             Func<int, int, int> add2 = (x, y) =>
             {
                 Console.WriteLine("Adding {0} and {1}", x, y);
@@ -88,10 +91,44 @@ namespace LanguageFeatures
             void TestLambdas ()
             {
                 int[] numbers = { 2, 3, 4, 5 };
+                foreach (var number in numbers)
+                {
+                    square(number);
+                }
                 var squaredNumbers = numbers.Select(x => x * x);
                 Console.WriteLine(string.Join(" ", squaredNumbers));
             }
             // Output: 4 9 16 25
         }
+
+
+
+        public class AwaitOperator
+        {
+            public static async Task Main()
+            {
+                Task<int> downloading = DownloadDocsMainPageAsync();
+                Console.WriteLine($"{nameof(Main)}: Launched downloading.");
+
+                int bytesLoaded = await downloading;
+                Console.WriteLine($"{nameof(Main)}: Downloaded {bytesLoaded} bytes.");
+            }
+
+            private static async Task<int> DownloadDocsMainPageAsync()
+            {
+                Console.WriteLine($"{nameof(DownloadDocsMainPageAsync)}: About to start downloading.");
+
+                var client = new HttpClient();
+                byte[] content = await client.GetByteArrayAsync("https://docs.microsoft.com/en-us/");
+
+                Console.WriteLine($"{nameof(DownloadDocsMainPageAsync)}: Finished downloading.");
+                return content.Length;
+            }
+        }
+            // Output similar to:
+            // DownloadDocsMainPageAsync: About to start downloading.
+            // Main: Launched downloading.
+            // DownloadDocsMainPageAsync: Finished downloading.
+            // Main: Downloaded 27700 bytes.
     }
 }
